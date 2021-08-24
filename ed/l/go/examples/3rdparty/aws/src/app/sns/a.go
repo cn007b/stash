@@ -11,7 +11,7 @@ import (
 
 func Run(cfg *aws.Config) {
 	svc := sns.New(session.New(), cfg)
-	arn := "arn:aws:sns:us-east-1:613225557329:stark-qa-neighbor-onboarding"
+	arn := "arn:aws:sns:${reg}:${id}:${name}"
 	publish(svc, arn)
 }
 
