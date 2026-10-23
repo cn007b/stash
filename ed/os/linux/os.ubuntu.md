@@ -1,6 +1,8 @@
 Ubuntu
 -
 
+[releases](https://documentation.ubuntu.com/release-notes/archive/)
+
 ````sh
 apt-get update --fix-missing
 apt-get install -y --force-yes

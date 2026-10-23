@@ -154,6 +154,12 @@ Portfolio model - one of:
 | Enterprise scope | Decisive battles      35% | Invasions  50% |
 +------------------+---------------------------+----------------+
 
+Who should make decision Architect/Developer:
+* Question more structural or code oriented.
+* Question more strategic or tactical.
+* Requires high/low effort.
+* Significant/insignificant tradeoffs.
+
 #### ATAM
 
 ATAM (Architecture Tradeoff Analysis Method) - structured method to evaluate software architecture

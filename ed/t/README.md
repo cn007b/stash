@@ -246,6 +246,7 @@ environments: local; dev; stage; staging; prod; production;
 $ Dollar
 % Percent
 & Ampersand
+§ Section sign
 * Asterisk
 — Dash (long dash)
 - Hyphen
