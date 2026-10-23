@@ -9,10 +9,10 @@ Resilience - is the ability of a system to adapt or keep working when challenges
 
 Graceful degradation - ability to maintain limited functionality even when large portion of it has been destroyed.
 
-#### Latency 2020
-
 Latency - time delay between: when request made and when response starts being received.
 Tail latency - slowest requests: P95, P99.
+
+#### Latency 2020
 
 ````
 Access CPU register  - 1 nanosecond
@@ -20,26 +20,60 @@ L1/L2 cache access   - 1-10 nanosecond
 L3 cache access      - 10-100 nanosecond
 System call (kernel) - 100-1000 nanosecond
 
-Context switch                         -  1-10 microsecond
-HTTP request                           -  10-100 microsecond
-Read 1MB data from memory sequentially - ~15 microsecond
+Context switch                         - ~1-10 microsecond
+HTTP request                           - ~10-100 microsecond
+Read 1MB data from memory sequentially - ~10-20 microsecond
 Read 8K page from SSD                  - ~100 microsecond
 SSD page write                         - ~1000 microsecond
 Network roundtrip                      - ~100 microsecond
 
 Memcache/Redis operation               - ~1 millisecond (includes roundtrip)
-Intra-zone network roundtrip           -  5 millisecond
-HHD seek time                          -  5 millisecond
+Intra-zone network roundtrip           - ~5 millisecond
+HHD seek time                          - ~5 millisecond
 MySQL optimized read 1 row             - ~5-10 millisecond
-Network roundtrip US-west -> US-east   -  10-100 millisecond
-Network roundtrip US-east -> Europe    -  10-100 millisecond
-Read 1GB sequentially from memory      -  10-100 millisecond
+MongoDB optimized read 1 doc           - ~5-10 millisecond
+Network roundtrip US-west -> US-east   - ~10-100 millisecond
+Network roundtrip US-east -> Europe    - ~10-100 millisecond
+Read 1GB sequentially from memory      - ~10-100 millisecond
 bcrypt password                        - ~300 millisecond
-TLS handshake                          -  250-500 millisecond (depends on participants distance)
-Network roundtrip US-west -> Singapore -  100-1000 millisecond
-Read 1GB sequentially from SSD         -  100-1000 millisecond
+TLS handshake                          - ~250-500 millisecond
+Network roundtrip US-west -> Singapore - ~100-1000 millisecond
+Read 1GB sequentially from SSD         - ~100-1000 millisecond
 
 Transfer 1GB over network within same region - ~10 second
+````
+
+#### Latency 2026
+
+````
+Access CPU register  - ~0.2-0.5 nanosecond
+L1/L2 cache access   - ~1-5 nanosecond
+L3 cache access      - ~10-20 nanosecond
+System call (kernel) - ~100-500 nanosecond
+
+Context switch                         - ~1-5 microsecond
+HTTP request                           - ~10-100 microsecond
+Read 1MB data from memory sequentially - ~10-20 microsecond
+Read 8K page from SSD                  - ~20-50 microsecond
+SSD page write                         - ~50-200 microsecond
+Network roundtrip                      - ~50-300 microsecond
+RDMA roundtrip (same rack)             - ~1-2 microsecond
+
+Memcache/Redis operation               - ~0.5-1 millisecond (includes roundtrip)
+Intra-zone network roundtrip           - ~0.5-1 millisecond
+Cross-AZ network roundtrip             - ~1-2 millisecond
+HDD seek time                          - ~5 millisecond
+MySQL optimized read 1 row             - ~1-3 millisecond
+MongoDB optimized read 1 doc           - ~1-3 millisecond
+Network roundtrip US-west -> US-east   - ~60-80 millisecond
+Network roundtrip US-east -> Europe    - ~70-90 millisecond
+Read 1GB sequentially from memory      - ~10-20 millisecond
+bcrypt password                        - ~100-300 millisecond
+TLS handshake                          - ~70-200 millisecond
+Network roundtrip US-west -> Singapore - ~160-220 millisecond
+Read 1GB sequentially from SSD         - ~300-500 millisecond
+
+Transfer 1GB over network within same region - ~1-2 second
 ````
 
 #### High Performance Web Sites
