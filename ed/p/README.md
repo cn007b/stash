@@ -27,6 +27,7 @@ Networking
 <br>VPC       - Virtual Private Cloud.
 <br>VPN       - Virtual Private Network.
 <br>VPS       - Virtual Private Server.
+<br>WAF       - Web Application Firewall.
 <br>WAN       - Wide Area Network.
 
 802     = LAN technologies.

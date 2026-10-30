@@ -5,6 +5,8 @@ History of NATS
 
 #### 2.12
 
+* Header-driven delayed message delivery.
+
 #### 2.11
 
 #### 2.10
