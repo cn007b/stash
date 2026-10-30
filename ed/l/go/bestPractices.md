@@ -1,21 +1,18 @@
 Best Practices
 -
 
+[project layout](https://github.com/golang-standards/project-layout)
+~~[go-swagger](https://github.com/go-swagger/go-swagger)~~
+[oapi-codegen](https://github.com/oapi-codegen/oapi-codegen)
 [code style](https://github.com/golang/go/wiki/CodeReviewComments)
 [code style](https://google.github.io/styleguide/go)
 [code style](https://google.github.io/styleguide/go/best-practices)
 [uber code style](https://github.com/uber-go/guide/blob/master/style.md)
-[project layout](https://github.com/golang-standards/project-layout)
-[recipes](https://github.com/nikolaydubina/go-recipes)
 [panic detector](https://github.com/uber-go/nilaway/)
 [package import order](https://github.com/daixiang0/gci)
 [linter](https://github.com/golangci/golangci-lint)
 [linter](https://github.com/dominikh/go-tools)
 [error linter](https://github.com/kisielk/errcheck)
-[raft protocol](https://github.com/hashicorp/raft)
-[confines go modules](https://github.com/AkihiroSuda/gomodjail)
-~~[go-swagger](https://github.com/go-swagger/go-swagger)~~
-[oapi-codegen](https://github.com/oapi-codegen/oapi-codegen)
 
 * Avoid nesting by handling errors first.
 * Make your packages "go get"-able.

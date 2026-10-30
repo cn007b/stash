@@ -41,6 +41,11 @@ Scalar Value Types:
 First enum value must have value zero and should have name `*_UNSPECIFIED` or `*_UNKNOWN`,
 and should have no semantic meaning other than "this value was unspecified".
 
+`deprecated=true` mark field as obsolete, it should no longer be used,
+it remains active in the schema and can still be serialized/deserialized.
+
+`reserved` locks tag number and ignore the field during serialization/deserialization.
+
 Protocol Buffers are not designed to handle large messages.
 If you are dealing in messages larger than a megabyte each,
 it may be time to consider an alternate strategy.
