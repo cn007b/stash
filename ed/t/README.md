@@ -106,6 +106,9 @@ PC: CPU, Main Memory, Secondary Memory (SSD).
 
 Weight Gross - with pack, Weight Net - without pack.
 
+Debit = Minus (Money leaving your account).
+Credit = Plus (Money entering your account).
+
 Interviewer - who asks questions, Interviewee - candidate.
 
 For task success: determine DOD & timelines (better story points).
